@@ -98,7 +98,7 @@ if (isPrice(result)) {
 }
 
 // Bài 5 // Giống bài *
-// document.write("============== Bài 5 ============= <br/>");
+document.write("============== Bài 5 ============= <br/>");
 let lines = 5;
 let startLine = 1;
 for (let i = 1; i <= lines; i++) {
@@ -110,7 +110,7 @@ for (let i = 1; i <= lines; i++) {
 }
 
 // Bài 6 //
-// document.write("============= Bài 6 =============== <br/>");
+document.write("============= Bài 6 =============== <br/>");
 function drawChess(n) {
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
@@ -126,7 +126,7 @@ function drawChess(n) {
 drawChess(8);
 
 //Bài 7
-// document.write("========= Bài 7 =============");
+document.write("========= Bài 7 =============");
 function multiCation() {
   for (let i = 1; i <= 10; i++) {
     document.write(`<h3>Bảng cửu chương ${i}</h3>`);
