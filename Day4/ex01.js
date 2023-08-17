@@ -17,31 +17,28 @@ console.log(`Số nhỏ nhất ${min} ở vị trí ${minIndex}`);
 // Sử dụng vòng lặp
 
 // Cách 2
-let maxNumber = arr[0]; // In ra là 5
-let maxFindNumber = 0; // Gán vị trí index = 0
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i] > maxNumber) {
-    // Nếu arr[i] lớn hơn maxNumber thì gán lại maxNumber
-    maxNumber = arr[i];
-    maxFindNumber = i;
-  }
-}
-let minNumber = arr[0];
-let minFindNumber = 0;
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i] < minNumber) {
-    // Nếu arr[i] nhỏ hơn minNumber thì gán lại minNumber
-    minNumber = arr[i];
-    minFindNumber = i;
-  }
-}
+var numbers = [5, 2, 4, -10, 8, 9, 3]
+var maxValue = numbers[0]
+var minValue = numbers[0]
+var positionMin = numbers[0]
+var positionMax = numbers[0]
+
+numbers.forEach(function (number) {
+  maxValue = maxValue lt number ? number : maxValue
+  minValue = minValue > number ? number : minValue
+  number > maxValue ? (positionMax = number) : (positionMin = number)
+})
 
 console.log(
-  `Số lớn nhất có giá trị là ${maxNumber} and address ${maxFindNumber}`
-);
-console.log(
-  `Số nhỏ nhất có giá trị là ${minNumber} and address ${minFindNumber}`
-);
+  `
+Giá trị lớn nhất của mảng là: ${maxValue}
+    - vị trí index: ${positionMax}
+`,
+  `
+Giá trị nhỏ nhất của mảng là: ${minValue}
+    - vị trí index: ${positionMin}
+`
+)
 
 // Bài 2
 // Cho trước 1 mảng số nguyên, tính trung bình các số nguyên tố trong mảng.
