@@ -1,0 +1,211 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.over-lay {
+  background-color: rgba(157, 157, 161, 0.6);
+  position: fixed;
+  inset: 0;
+}
+.modal-text {
+  display: none;
+  border-radius: 10px;
+}
+.modal-text.show {
+  display: block;
+}
+
+.active {
+  background-color: gray;
+  color: white;
+}
+
+.file-register {
+  display: none;
+}
+.title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.modal-header {
+  width: 461px;
+  height: auto;
+  position: fixed;
+  background-color: #fff;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  .md-btn {
+    width: 100%;
+    display: flex;
+    .login {
+      width: 50%;
+      outline: none;
+      border: none;
+      padding: 19px 0;
+      font-size: 16px;
+      border-top-left-radius: 10px;
+      cursor: pointer;
+    }
+    .register {
+      width: 50%;
+      outline: none;
+      font-size: 16px;
+      border: none;
+      border-top-right-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  > p {
+    text-align: center;
+    margin: 20px;
+  }
+  .society {
+    display: flex;
+    justify-content: center;
+    &-icon {
+      padding: 4px 0;
+      width: 40%;
+      background: #e2e8f0;
+      border: none;
+      margin: 0 10px;
+      border-radius: 5px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > img {
+        margin-right: 10px;
+      }
+    }
+  }
+  .content-line {
+    text-align: center;
+    margin: 20px;
+    position: relative;
+    .content-or {
+      .or {
+        background: #fff;
+        padding: 5px 10px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 17px;
+        width: 92%;
+        height: 0;
+        border-top: 1px solid #eee;
+        transform: translateY(-50%);
+        z-index: -1;
+      }
+    }
+  }
+  .form-submit {
+    form {
+      margin: 0 35px;
+      .input-control {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        > label {
+          margin-bottom: 5px;
+        }
+        > input {
+          padding: 12px 12px;
+          border-radius: 4px;
+          outline: none;
+          border: 1px solid #ccc;
+        }
+        &.success {
+          > input {
+            border-color: #09c372;
+          }
+        }
+        &.error {
+          > input {
+            border-color: #ff3860;
+          }
+        }
+        > .error {
+          color: #ff3860;
+          font-style: italic;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .passworld-forget {
+    text-align: end;
+    margin: 0 35px;
+    > a {
+      text-decoration: none;
+      font-style: italic;
+      color: #ccc;
+    }
+  }
+  .input {
+    padding: 14px;
+    width: 100%;
+    margin: 20px 0;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+    background-color: #1a7900;
+    cursor: pointer;
+  }
+
+  // CSS Form Register
+  .file-register {
+    margin: 0 35px;
+    // display: none;
+    .title-submit {
+      text-align: center;
+      margin: 20px;
+    }
+    .form-register {
+      form {
+        .input-register {
+          display: flex;
+          flex-direction: column;
+          margin: 15px 0;
+          > input { 
+            padding: 12px;
+            margin-top: 4px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+          }
+          &.success2 {
+            >input {
+              border-color: #09c372;
+            }
+          }
+          &.error2 {
+            >input {
+              border-color: #ff3860;
+            }
+          }
+          > .error2 {
+            color: #ff3860;
+            font-style: italic;
+            margin-top: 5px;
+          }
+        }
+      }
+
+      .register-content {
+        margin-top: 35px;
+        line-height: 1.5;
+          > a {
+            text-decoration: none;
+          }
+      }
+    }
+  }
+}
