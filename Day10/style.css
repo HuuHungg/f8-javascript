@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel .carouse-inner {
+  display: flex;
+  transition: translate 0.4s ease;
+}
+
+.carousel .carousel-nav span {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background: gray;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dots {
+  position: absolute;
+  color: red;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 20px;
+  margin: 0 20px;
+}
+
+.dots li.active {
+  width: 30px;
+  background-color: aqua;
+}
+
+.carousel .carousel-nav span.prev {
+  left: 5px;
+}
+
+.carousel .carousel-nav span.next {
+  right: 5px;
+}
+
+.carousel-inner {
+  cursor: move; /* Use "grab" cursor when not dragging */
+}
+
+.carousel-inner:active {
+  cursor: move; /* Use "grabbing" cursor when dragging */
+}

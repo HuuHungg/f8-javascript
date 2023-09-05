@@ -35,7 +35,6 @@ function startEditingTask(item) {
   const editInput = document.createElement("input");
   editInput.type = "text";
   editInput.classList.add("enter-list");
-  editInput.placeholder = "Edit task...";
   editInput.value = item.querySelector("p").textContent;
 
   const saveButton = document.createElement("button");
@@ -61,7 +60,6 @@ function startEditingTask(item) {
 
     item.removeChild(editForm);
     editingTask = null;
-
     item.style.background = "";
     item.querySelector(".fa-pen-to-square").style.display = "block";
     item.querySelector(".fa-trash").style.display = "inline";
